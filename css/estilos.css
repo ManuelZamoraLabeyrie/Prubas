@@ -1,0 +1,381 @@
+*{
+    padding: 0;
+    text-align: center;
+    background-color: pink;
+    margin: 8px;
+}
+
+
+h1{
+    margin-left: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: yellow;
+    text-align: center;
+}
+
+section{
+    margin-left: 30px;
+    text-align: center;
+}
+
+section article p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.articulo {
+    color: yellow;
+    text-align: center;
+}
+
+#articulo{
+    display: flex;
+}
+
+.logo-banana {
+    width: 100px;
+}
+
+.links-menu {
+    text-align: right;
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.agus-banana {
+    width: 400px;
+}
+#pie {
+    text-align: end;
+}
+
+#footer {
+    height: 50px;
+}
+
+a {
+    color: yellow;
+}
+
+#main-nosotros {
+    border: 1px solid black;
+    background-image: url("../media/productos/banana1.jpg");
+    background-size: cover;
+    background-position: 0%;
+    height: 1000px;
+    width: 100%;
+}
+
+
+/*Selectores*/
+/*Selectores Etiqueta*/
+h1 {
+    font-size: 30px;
+}
+ul {
+    list-style-type: none;
+}
+ol{
+    list-style-type: none;
+}
+
+/*FlexBox*/
+.flex-container{
+    border: 1px solid black;
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+}
+.caja{
+    width: 120px;
+    height: 120px;
+    border: 1px solid grey;
+    margin: 5px;
+
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.c1{
+    background-color: green;
+    order: 3;
+}
+.c2{
+    background-color: blue;
+    order: 2;
+}
+.c3{
+    background-color: yellow;
+    order: 1;
+}
+
+#menudisplay {
+    display: flex;
+    width: 600px;
+    height: 430px;
+    margin: 10px 400px;
+}
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+#menu-boton {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+}
+button > div {
+    background: black;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+button:hover div:first-child {
+    transform: rotate(45deg);
+}
+button:hover div:nth-child(2) {
+    opacity: 0;
+} 
+button:hover div:last-child {
+    transform: rotate(-45deg);
+}
+
+/*Box-Modeling*/
+.box-modeling {
+    border: 2px solid black;
+}
+.box-modeling h1 {
+    font-size: 30px;
+}
+
+/*CSS GRIDS*/
+
+
+/*Grids Areas
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "nav    header      header"
+    "nav    productos   publicidad"
+    "nav    servicios   publicidad"
+    "nav    footer      footer"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 75px;
+}*/
+
+.border {
+    border: 1px solid black;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    gap: 10px;
+}
+.grid-container > *{
+    background-color: lightgoldenrodyellow;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-overflow: clip;
+    
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+}
+header, footer{
+    grid-column: 1 / span 3;
+}
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links-menu{
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Pseudoclases*/
+.links-menu {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: yellow;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid pink;
+}
+
+.links-menu:hover {
+    color: pink;
+    transform: scale(1.1);
+    outline: 2px solid lightgoldenrodyellow;
+    box-shadow: 4px 5px 17px -4px lightgoldenrodyellow;
+}
+
+.links-menu::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.links-menu:hover::before {
+    width: 250%;
+}
+
+button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: yellow;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid lightgoldenrodyellow;
+}
+
+button:hover {
+    color: pink;
+    transform: scale(1.1);
+    outline: 2px solid;
+    box-shadow: 4px 5px 17px -4px;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+button:hover::before {
+    width: 250%;
+}
+
+.grupo{
+    width: 500px;
+    margin: 20px auto;
+    background: black;
+    padding: 1px;
+    font-size: 20px;
+}
+
+.bi-instagram{
+    font-size: 30px;
+}
+
+/*first and last type
+.parrafos p:first-child{
+    color: lightgoldenrodyellow;
+}
+
+.parrafos p:last-child{
+    color: lightgoldenrodyellow;
+}
+
+.elementos p:first-of-type{
+    background-color: purple;
+    color: darkblue;
+}
+.elementos :nth-child(2){
+    background-color: red;
+    color: green;
+}
+*/
+
+/*MediaQueries
+@media screen and (max-width: 479px){
+    #grilla{
+        height: 500px;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "servicios"
+        "publicidad"
+        "pie";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,1fr);
+    }
+}*/
+
+@media screen and (min-width: 480px) and (max-width: 959px){
+    .grid-container{
+        background-color: pink;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-container{
+        grid-template-columns: auto;
+    }
+}
+@media all and (max-width: 600px){
+    aside, article{
+        grid-column: 1 / span 3;
+    }
+    
+    .grid-container{
+        grid-template-rows: repeat(5, 100px);
+}
+}
